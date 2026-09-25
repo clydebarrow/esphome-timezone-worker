@@ -57,7 +57,9 @@ curl -X POST https://<worker>/v1/timezone -d 'latitude=-33.87&longitude=151.21'
 | `unixtime` | The time the answer was made, in seconds since 1970 |
 | `tzdata_version` | The tz database release the rules came from |
 
-The field names and values match ESPHome's `ParsedTimezone` and `DSTRule`.
+The field names and values match ESPHome's `ParsedTimezone` and `DSTRule`. The
+ESPHome `sntp` time platform uses this service when its `timezone` option is a
+mapping, for example `timezone: {zone: ip}`.
 
 ### Errors
 
@@ -142,3 +144,7 @@ You can also deploy from your own machine with `npx wrangler login` and then
 Like any web service, the worker sees the public IP address of each device that
 calls it. The worker does not store or log it. Cloudflare's own request logs are
 covered by the Cloudflare account settings.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).

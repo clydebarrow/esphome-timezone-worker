@@ -19,5 +19,6 @@
     "wrangler": "^4.139.0"
   },
   "private": true,
-  "type": "module"
+  "type": "module",
+  "license": "MIT"
 }
