@@ -1,0 +1,3 @@
+# Used by scripts/generate_zones.py. tzdata is updated by the update-tzdata workflow.
+tzdata==2026.4
+aioesphomeapi==46.4.1

@@ -1,0 +1,32 @@
+name: Update tzdata
+
+on:
+  schedule:
+    - cron: "17 3 * * 1" # Mondays
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Pin the latest tzdata
+        run: |
+          version=$(pip index versions tzdata | head -1 | sed -E 's/.*\((.*)\).*/\1/')
+          sed -i -E "s/^tzdata==.*/tzdata==${version}/" requirements.txt
+          echo "TZDATA_VERSION=${version}" >> "$GITHUB_ENV"
+      - run: pip install -r requirements.txt
+      - run: python scripts/generate_zones.py
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: update-tzdata
+          commit-message: Update tzdata to ${{ env.TZDATA_VERSION }}
+          title: Update tzdata to ${{ env.TZDATA_VERSION }}
+          body: Regenerated the zone rules from tzdata ${{ env.TZDATA_VERSION }}.

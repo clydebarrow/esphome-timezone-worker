@@ -1,0 +1,23 @@
+{
+  "name": "esphome-timezone-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker that returns pre-parsed POSIX timezone rules for ESPHome devices",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc -p .",
+    "test": "vitest run",
+    "generate": "python scripts/generate_zones.py"
+  },
+  "dependencies": {
+    "@photostructure/tz-lookup": "^11.7.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260925.1",
+    "typescript": "^7.0.2",
+    "vitest": "^3.2.7",
+    "wrangler": "^4.139.0"
+  },
+  "private": true,
+  "type": "module"
+}
