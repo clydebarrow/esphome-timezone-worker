@@ -3,7 +3,12 @@ import data from "./zones.json";
 import { hasDst, isInDst, utcOffsetSeconds, type ParsedTimezone } from "./rules";
 
 const ZONES: Record<string, string> = data.zones;
-const RULES = data.rules as unknown as Record<string, ParsedTimezone>;
+interface ZoneRules extends ParsedTimezone {
+  std_abbreviation: string;
+  dst_abbreviation: string;
+}
+
+const RULES = data.rules as unknown as Record<string, ZoneRules>;
 const ZONES_BY_LOWER_CASE = new Map(Object.keys(ZONES).map((name) => [name.toLowerCase(), name]));
 
 export const API_PATH = "/v1/timezone";
@@ -95,13 +100,15 @@ export function describeZone(zone: string, source: Source, nowMs: number) {
     throw new RequestError(422, `No rules for zone '${zone}'`);
   }
   const rules = RULES[posix];
+  const dst = isInDst(nowMs, rules);
   return {
     zone,
     source,
     posix,
     ...rules,
     has_dst: hasDst(rules),
-    dst: isInDst(nowMs, rules),
+    dst,
+    abbreviation: dst ? rules.dst_abbreviation : rules.std_abbreviation,
     utc_offset_seconds: utcOffsetSeconds(nowMs, rules),
     unixtime: Math.floor(nowMs / 1000),
     tzdata_version: data.tzdata_version,

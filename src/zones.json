@@ -2,6 +2,7 @@
  "parser": "aioesphomeapi 46.4.1",
  "rules": {
   "<+00>0": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -19,9 +20,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+00",
    "std_offset_seconds": 0
   },
   "<+00>0<+02>-2,M3.5.0/1,M10.5.0/3": {
+   "dst_abbreviation": "+02",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -39,9 +42,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "+00",
    "std_offset_seconds": 0
   },
   "<+01>-1": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -59,9 +64,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+01",
    "std_offset_seconds": -3600
   },
   "<+02>-2": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -79,9 +86,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+02",
    "std_offset_seconds": -7200
   },
   "<+0330>-3:30": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -99,9 +108,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+0330",
    "std_offset_seconds": -12600
   },
   "<+03>-3": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -119,9 +130,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+03",
    "std_offset_seconds": -10800
   },
   "<+0430>-4:30": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -139,9 +152,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+0430",
    "std_offset_seconds": -16200
   },
   "<+04>-4": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -159,9 +174,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+04",
    "std_offset_seconds": -14400
   },
   "<+0530>-5:30": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -179,9 +196,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+0530",
    "std_offset_seconds": -19800
   },
   "<+0545>-5:45": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -199,9 +218,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+0545",
    "std_offset_seconds": -20700
   },
   "<+05>-5": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -219,9 +240,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+05",
    "std_offset_seconds": -18000
   },
   "<+0630>-6:30": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -239,9 +262,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+0630",
    "std_offset_seconds": -23400
   },
   "<+06>-6": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -259,9 +284,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+06",
    "std_offset_seconds": -21600
   },
   "<+07>-7": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -279,9 +306,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+07",
    "std_offset_seconds": -25200
   },
   "<+0845>-8:45": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -299,9 +328,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+0845",
    "std_offset_seconds": -31500
   },
   "<+08>-8": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -319,9 +350,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+08",
    "std_offset_seconds": -28800
   },
   "<+09>-9": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -339,9 +372,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+09",
    "std_offset_seconds": -32400
   },
   "<+1030>-10:30<+11>-11,M10.1.0,M4.1.0": {
+   "dst_abbreviation": "+11",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -359,9 +394,11 @@
     "type": 1,
     "week": 1
    },
+   "std_abbreviation": "+1030",
    "std_offset_seconds": -37800
   },
   "<+10>-10": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -379,9 +416,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+10",
    "std_offset_seconds": -36000
   },
   "<+11>-11": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -399,9 +438,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+11",
    "std_offset_seconds": -39600
   },
   "<+11>-11<+12>,M10.1.0,M4.1.0/3": {
+   "dst_abbreviation": "+12",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -419,9 +460,11 @@
     "type": 1,
     "week": 1
    },
+   "std_abbreviation": "+11",
    "std_offset_seconds": -39600
   },
   "<+1245>-12:45<+1345>,M9.5.0/2:45,M4.1.0/3:45": {
+   "dst_abbreviation": "+1345",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -439,9 +482,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "+1245",
    "std_offset_seconds": -45900
   },
   "<+12>-12": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -459,9 +504,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+12",
    "std_offset_seconds": -43200
   },
   "<+13>-13": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -479,9 +526,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+13",
    "std_offset_seconds": -46800
   },
   "<+14>-14": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -499,9 +548,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "+14",
    "std_offset_seconds": -50400
   },
   "<-00>0": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -519,9 +570,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-00",
    "std_offset_seconds": 0
   },
   "<-01>1": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -539,9 +592,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-01",
    "std_offset_seconds": 3600
   },
   "<-01>1<+00>,M3.5.0/0,M10.5.0/1": {
+   "dst_abbreviation": "+00",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -559,9 +614,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "-01",
    "std_offset_seconds": 3600
   },
   "<-02>2": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -579,9 +636,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-02",
    "std_offset_seconds": 7200
   },
   "<-02>2<-01>,M3.5.0/-1,M10.5.0/0": {
+   "dst_abbreviation": "-01",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -599,9 +658,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "-02",
    "std_offset_seconds": 7200
   },
   "<-03>3": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -619,9 +680,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-03",
    "std_offset_seconds": 10800
   },
   "<-03>3<-02>,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "-02",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -639,9 +702,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "-03",
    "std_offset_seconds": 10800
   },
   "<-04>4": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -659,9 +724,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-04",
    "std_offset_seconds": 14400
   },
   "<-04>4<-03>,M9.1.6/24,M4.1.6/24": {
+   "dst_abbreviation": "-03",
    "dst_end": {
     "day": 0,
     "day_of_week": 6,
@@ -679,9 +746,11 @@
     "type": 1,
     "week": 1
    },
+   "std_abbreviation": "-04",
    "std_offset_seconds": 14400
   },
   "<-05>5": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -699,9 +768,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-05",
    "std_offset_seconds": 18000
   },
   "<-06>6": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -719,9 +790,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-06",
    "std_offset_seconds": 21600
   },
   "<-06>6<-05>,M9.1.6/22,M4.1.6/22": {
+   "dst_abbreviation": "-05",
    "dst_end": {
     "day": 0,
     "day_of_week": 6,
@@ -739,9 +812,11 @@
     "type": 1,
     "week": 1
    },
+   "std_abbreviation": "-06",
    "std_offset_seconds": 21600
   },
   "<-07>7": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -759,9 +834,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-07",
    "std_offset_seconds": 25200
   },
   "<-08>8": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -779,9 +856,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-08",
    "std_offset_seconds": 28800
   },
   "<-0930>9:30": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -799,9 +878,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-0930",
    "std_offset_seconds": 34200
   },
   "<-09>9": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -819,9 +900,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-09",
    "std_offset_seconds": 32400
   },
   "<-10>10": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -839,9 +922,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-10",
    "std_offset_seconds": 36000
   },
   "<-11>11": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -859,9 +944,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-11",
    "std_offset_seconds": 39600
   },
   "<-12>12": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -879,9 +966,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "-12",
    "std_offset_seconds": 43200
   },
   "ACST-9:30": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -899,9 +988,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "ACST",
    "std_offset_seconds": -34200
   },
   "ACST-9:30ACDT,M10.1.0,M4.1.0/3": {
+   "dst_abbreviation": "ACDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -919,9 +1010,11 @@
     "type": 1,
     "week": 1
    },
+   "std_abbreviation": "ACST",
    "std_offset_seconds": -34200
   },
   "AEST-10": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -939,9 +1032,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "AEST",
    "std_offset_seconds": -36000
   },
   "AEST-10AEDT,M10.1.0,M4.1.0/3": {
+   "dst_abbreviation": "AEDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -959,9 +1054,11 @@
     "type": 1,
     "week": 1
    },
+   "std_abbreviation": "AEST",
    "std_offset_seconds": -36000
   },
   "AKST9AKDT,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "AKDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -979,9 +1076,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "AKST",
    "std_offset_seconds": 32400
   },
   "AST4": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -999,9 +1098,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "AST",
    "std_offset_seconds": 14400
   },
   "AST4ADT,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "ADT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1019,9 +1120,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "AST",
    "std_offset_seconds": 14400
   },
   "AWST-8": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1039,9 +1142,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "AWST",
    "std_offset_seconds": -28800
   },
   "CAT-2": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1059,9 +1164,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "CAT",
    "std_offset_seconds": -7200
   },
   "CET-1": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1079,9 +1186,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "CET",
    "std_offset_seconds": -3600
   },
   "CET-1CEST,M3.5.0,M10.5.0/3": {
+   "dst_abbreviation": "CEST",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1099,9 +1208,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "CET",
    "std_offset_seconds": -3600
   },
   "CST-8": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1119,9 +1230,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "CST",
    "std_offset_seconds": -28800
   },
   "CST5CDT,M3.2.0/0,M11.1.0/1": {
+   "dst_abbreviation": "CDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1139,9 +1252,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "CST",
    "std_offset_seconds": 18000
   },
   "CST6": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1159,9 +1274,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "CST",
    "std_offset_seconds": 21600
   },
   "CST6CDT,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "CDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1179,9 +1296,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "CST",
    "std_offset_seconds": 21600
   },
   "ChST-10": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1199,9 +1318,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "ChST",
    "std_offset_seconds": -36000
   },
   "EAT-3": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1219,9 +1340,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "EAT",
    "std_offset_seconds": -10800
   },
   "EET-2": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1239,9 +1362,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "EET",
    "std_offset_seconds": -7200
   },
   "EET-2EEST,M3.4.4/50,M10.4.4/50": {
+   "dst_abbreviation": "EEST",
    "dst_end": {
     "day": 0,
     "day_of_week": 4,
@@ -1259,9 +1384,11 @@
     "type": 1,
     "week": 4
    },
+   "std_abbreviation": "EET",
    "std_offset_seconds": -7200
   },
   "EET-2EEST,M3.5.0/0,M10.5.0/0": {
+   "dst_abbreviation": "EEST",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1279,9 +1406,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "EET",
    "std_offset_seconds": -7200
   },
   "EET-2EEST,M3.5.0/3,M10.5.0/4": {
+   "dst_abbreviation": "EEST",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1299,9 +1428,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "EET",
    "std_offset_seconds": -7200
   },
   "EET-2EEST,M4.5.5/0,M10.5.4/24": {
+   "dst_abbreviation": "EEST",
    "dst_end": {
     "day": 0,
     "day_of_week": 4,
@@ -1319,9 +1450,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "EET",
    "std_offset_seconds": -7200
   },
   "EST5": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1339,9 +1472,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "EST",
    "std_offset_seconds": 18000
   },
   "EST5EDT,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "EDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1359,9 +1494,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "EST",
    "std_offset_seconds": 18000
   },
   "GMT0": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1379,9 +1516,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "GMT",
    "std_offset_seconds": 0
   },
   "GMT0BST,M3.5.0/1,M10.5.0": {
+   "dst_abbreviation": "BST",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1399,9 +1538,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "GMT",
    "std_offset_seconds": 0
   },
   "HKT-8": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1419,9 +1560,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "HKT",
    "std_offset_seconds": -28800
   },
   "HST10": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1439,9 +1582,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "HST",
    "std_offset_seconds": 36000
   },
   "HST10HDT,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "HDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1459,9 +1604,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "HST",
    "std_offset_seconds": 36000
   },
   "IST-1GMT0,M10.5.0,M3.5.0/1": {
+   "dst_abbreviation": "GMT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1479,9 +1626,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "IST",
    "std_offset_seconds": -3600
   },
   "IST-2IDT,M3.4.4/26,M10.5.0": {
+   "dst_abbreviation": "IDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1499,9 +1648,11 @@
     "type": 1,
     "week": 4
    },
+   "std_abbreviation": "IST",
    "std_offset_seconds": -7200
   },
   "IST-5:30": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1519,9 +1670,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "IST",
    "std_offset_seconds": -19800
   },
   "JST-9": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1539,9 +1692,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "JST",
    "std_offset_seconds": -32400
   },
   "KST-9": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1559,9 +1714,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "KST",
    "std_offset_seconds": -32400
   },
   "MSK-3": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1579,9 +1736,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "MSK",
    "std_offset_seconds": -10800
   },
   "MST7": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1599,9 +1758,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "MST",
    "std_offset_seconds": 25200
   },
   "MST7MDT,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "MDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1619,9 +1780,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "MST",
    "std_offset_seconds": 25200
   },
   "NST3:30NDT,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "NDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1639,9 +1802,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "NST",
    "std_offset_seconds": 12600
   },
   "NZST-12NZDT,M9.5.0,M4.1.0/3": {
+   "dst_abbreviation": "NZDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1659,9 +1824,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "NZST",
    "std_offset_seconds": -43200
   },
   "PKT-5": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1679,9 +1846,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "PKT",
    "std_offset_seconds": -18000
   },
   "PST-8": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1699,9 +1868,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "PST",
    "std_offset_seconds": -28800
   },
   "PST8PDT,M3.2.0,M11.1.0": {
+   "dst_abbreviation": "PDT",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1719,9 +1890,11 @@
     "type": 1,
     "week": 2
    },
+   "std_abbreviation": "PST",
    "std_offset_seconds": 28800
   },
   "SAST-2": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1739,9 +1912,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "SAST",
    "std_offset_seconds": -7200
   },
   "SST11": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1759,9 +1934,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "SST",
    "std_offset_seconds": 39600
   },
   "UTC0": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1779,9 +1956,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "UTC",
    "std_offset_seconds": 0
   },
   "WAT-1": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1799,9 +1978,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "WAT",
    "std_offset_seconds": -3600
   },
   "WET0WEST,M3.5.0/1,M10.5.0": {
+   "dst_abbreviation": "WEST",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1819,9 +2000,11 @@
     "type": 1,
     "week": 5
    },
+   "std_abbreviation": "WET",
    "std_offset_seconds": 0
   },
   "WIB-7": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1839,9 +2022,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "WIB",
    "std_offset_seconds": -25200
   },
   "WIT-9": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1859,9 +2044,11 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "WIT",
    "std_offset_seconds": -32400
   },
   "WITA-8": {
+   "dst_abbreviation": "",
    "dst_end": {
     "day": 0,
     "day_of_week": 0,
@@ -1879,6 +2066,7 @@
     "type": 0,
     "week": 0
    },
+   "std_abbreviation": "WITA",
    "std_offset_seconds": -28800
   }
  },

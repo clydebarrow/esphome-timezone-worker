@@ -36,8 +36,11 @@ describe("zone lookup", () => {
       dst_offset_seconds: -3600,
       dst_start: { type: 1, month: 3, week: 5, day_of_week: 0, time_seconds: 3600 },
       dst_end: { type: 1, month: 10, week: 5, day_of_week: 0, time_seconds: 7200 },
+      std_abbreviation: "GMT",
+      dst_abbreviation: "BST",
       has_dst: true,
       dst: true,
+      abbreviation: "BST",
       utc_offset_seconds: 3600,
       unixtime: JULY / 1000,
       tzdata_version: data.tzdata_version,
@@ -56,7 +59,14 @@ describe("zone lookup", () => {
 
   it("handles zones without daylight saving", async () => {
     const { body } = await call(post({ zone: "Asia/Kolkata" }));
-    expect(body).toMatchObject({ has_dst: false, dst: false, utc_offset_seconds: 19800 });
+    expect(body).toMatchObject({
+      has_dst: false,
+      dst: false,
+      utc_offset_seconds: 19800,
+      std_abbreviation: "IST",
+      dst_abbreviation: "",
+      abbreviation: "IST",
+    });
     expect(body.dst_start.type).toBe(0);
   });
 
@@ -64,10 +74,19 @@ describe("zone lookup", () => {
     expect((await call(post({ zone: "Australia/Sydney" }), JANUARY)).body).toMatchObject({
       dst: true,
       utc_offset_seconds: 39600,
+      abbreviation: "AEDT",
     });
     expect((await call(post({ zone: "Australia/Sydney" }), JULY)).body).toMatchObject({
       dst: false,
       utc_offset_seconds: 36000,
+      abbreviation: "AEST",
+    });
+  });
+
+  it("gives numeric abbreviations without the angle brackets", async () => {
+    expect((await call(post({ zone: "Asia/Kathmandu" }))).body).toMatchObject({
+      posix: "<+0545>-5:45",
+      abbreviation: "+0545",
     });
   });
 

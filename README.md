@@ -37,8 +37,11 @@ curl -X POST https://<worker>/v1/timezone -d 'latitude=-33.87&longitude=151.21'
   "dst_offset_seconds": -3600,
   "dst_start": {"type": 1, "month": 3, "week": 5, "day_of_week": 0, "day": 0, "time_seconds": 3600},
   "dst_end": {"type": 1, "month": 10, "week": 5, "day_of_week": 0, "day": 0, "time_seconds": 7200},
+  "std_abbreviation": "GMT",
+  "dst_abbreviation": "BST",
   "has_dst": true,
   "dst": true,
+  "abbreviation": "BST",
   "utc_offset_seconds": 3600,
   "unixtime": 1790300486,
   "tzdata_version": "2026d"
@@ -52,8 +55,9 @@ curl -X POST https://<worker>/v1/timezone -d 'latitude=-33.87&longitude=151.21'
 | `posix` | The zone's POSIX TZ rule |
 | `std_offset_seconds`, `dst_offset_seconds` | POSIX offsets: seconds to add to local time to get UTC, so they are positive west of Greenwich |
 | `dst_start`, `dst_end` | When daylight saving starts and ends. `type` is `0` none, `1` month/week/day (`Mm.w.d`, week `5` is the last), `2` Julian day 1-365 not counting 29 February (`Jn`), `3` day of year 0-365 (`n`). `time_seconds` is the local time of the change, in seconds after midnight |
+| `std_abbreviation`, `dst_abbreviation` | The zone's names for standard and daylight saving time, such as `GMT` and `BST`. Zones without a name use their offset, such as `+0545`. `dst_abbreviation` is empty for zones without daylight saving |
 | `has_dst` | Whether the zone uses daylight saving at all |
-| `dst`, `utc_offset_seconds` | Whether daylight saving is in effect now, and the current offset, east of UTC |
+| `dst`, `utc_offset_seconds`, `abbreviation` | Whether daylight saving is in effect now, the current offset east of UTC, and the current abbreviation |
 | `unixtime` | The time the answer was made, in seconds since 1970 |
 | `tzdata_version` | The tz database release the rules came from |
 

@@ -13,6 +13,7 @@ from importlib.resources.abc import Traversable
 import io
 import json
 from pathlib import Path
+import re
 import sys
 from zoneinfo import ZoneInfo
 
@@ -36,6 +37,27 @@ def _walk(node: Traversable, prefix: str = ""):
             yield from _walk(child, f"{name}/")
         elif not child.name.startswith("_") and not child.name.endswith(".py"):
             yield name, child
+
+
+# A POSIX TZ string starts with the standard time name, then its offset, then the
+# optional daylight time name. Names are letters, or anything inside <>.
+_NAMES = re.compile(
+    r"^(?:<([^>]+)>|([A-Za-z]+))[+-]?\d+(?::\d+){0,2}(?:<([^>]+)>|([A-Za-z]+))?"
+)
+
+
+def _abbreviations(posix: str) -> tuple[str, str]:
+    """The standard and daylight saving time abbreviations in a POSIX TZ string."""
+    match = _NAMES.match(posix)
+    if match is None:
+        raise ValueError(f"Cannot read the zone names in '{posix}'")
+    std, std_bracketed, dst, dst_bracketed = (
+        match.group(2),
+        match.group(1),
+        match.group(4),
+        match.group(3),
+    )
+    return std or std_bracketed, dst or dst_bracketed or ""
 
 
 def _rule_dict(rule: DSTRule) -> dict[str, int]:
@@ -76,7 +98,10 @@ def main() -> int:
         if posix not in rules:
             transitions[name] = _transitions(data)
             parsed = parse_posix_tz(posix)
+            std_abbreviation, dst_abbreviation = _abbreviations(posix)
             rules[posix] = {
+                "std_abbreviation": std_abbreviation,
+                "dst_abbreviation": dst_abbreviation,
                 "std_offset_seconds": parsed.std_offset_seconds,
                 "dst_offset_seconds": parsed.dst_offset_seconds,
                 "dst_start": _rule_dict(parsed.dst_start),
