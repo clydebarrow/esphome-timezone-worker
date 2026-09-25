@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import data from "../src/zones.json";
 import transitions from "./fixtures/transitions.json";
 import { API_PATH, handleRequest } from "../src/handler";
+import { homePage } from "../src/pages";
 import { utcOffsetSeconds, type ParsedTimezone } from "../src/rules";
 
 const URL_ = `https://example.com${API_PATH}`;
@@ -165,7 +166,7 @@ describe("request handling", () => {
   });
 
   it("returns 404 for other paths", async () => {
-    expect((await handleRequest(new Request("https://example.com/", { method: "POST" }))).status).toBe(404);
+    expect((await handleRequest(new Request("https://example.com/other", { method: "POST" }))).status).toBe(404);
   });
 
   it("is never cached", async () => {
@@ -194,5 +195,56 @@ describe("daylight saving rules", () => {
       expect(utcOffsetSeconds(when * 1000, tz), `at ${when}`).toBe(offset);
       previous = offset;
     }
+  });
+});
+
+describe("web pages", () => {
+  const get = (path: string, method = "GET") => handleRequest(new Request(`https://example.com${path}`, { method }));
+
+  it("explains the service at the base URL", async () => {
+    const response = await get("/");
+    expect(response.status).toBe(200);
+    expect(response.headers.get("Content-Type")).toBe("text/html; charset=utf-8");
+    const html = await response.text();
+    expect(html).toContain("time zone");
+    expect(html).toContain("https://example.com/v1/timezone");
+    expect(html).toContain("stores no logs");
+    expect(html).toContain('href="/privacy"');
+  });
+
+  it("gives the privacy statement at /privacy", async () => {
+    const response = await get("/privacy");
+    expect(response.status).toBe(200);
+    expect(response.headers.get("Content-Type")).toBe("text/html; charset=utf-8");
+    const html = await response.text();
+    expect(html).toContain("stores no logs");
+    expect(html).toContain("IP address");
+  });
+
+  it("accepts a trailing slash", async () => {
+    expect((await get("/privacy/")).status).toBe(200);
+  });
+
+  it("answers HEAD without a body", async () => {
+    const response = await get("/privacy", "HEAD");
+    expect(response.status).toBe(200);
+    expect(await response.text()).toBe("");
+  });
+
+  it("only allows GET and HEAD", async () => {
+    const response = await get("/", "POST");
+    expect(response.status).toBe(405);
+    expect(response.headers.get("Allow")).toBe("GET, HEAD");
+  });
+
+  it("escapes the address it puts in the page", () => {
+    const html = homePage('https://exa"<mple.com');
+    expect(html).not.toContain("<mple");
+    expect(html).toContain("exa&#34;&#60;mple.com");
+  });
+
+  it("leaves the API path alone", async () => {
+    expect((await get("/v1/timezone")).status).toBe(405);
+    expect((await get("/v1/timezone/")).status).toBe(404);
   });
 });

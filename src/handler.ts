@@ -1,5 +1,6 @@
 import tzLookup from "@photostructure/tz-lookup";
 import data from "./zones.json";
+import { homePage, privacyPage } from "./pages";
 import { hasDst, isInDst, utcOffsetSeconds, type ParsedTimezone } from "./rules";
 
 const ZONES: Record<string, string> = data.zones;
@@ -115,8 +116,25 @@ export function describeZone(zone: string, source: Source, nowMs: number) {
   };
 }
 
+function htmlPage(request: Request, html: string): Response {
+  if (request.method !== "GET" && request.method !== "HEAD") {
+    return new Response("Use GET", { status: 405, headers: { Allow: "GET, HEAD" } });
+  }
+  return new Response(request.method === "HEAD" ? null : html, {
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'",
+      "X-Content-Type-Options": "nosniff",
+      "Cache-Control": "public, max-age=3600",
+    },
+  });
+}
+
 export async function handleRequest(request: Request, nowMs: number = Date.now()): Promise<Response> {
   const url = new URL(request.url);
+  const page = url.pathname.replace(/\/+$/, "") || "/";
+  if (page === "/") return htmlPage(request, homePage(url.origin));
+  if (page === "/privacy") return htmlPage(request, privacyPage());
   if (url.pathname !== API_PATH) return json({ error: "Not found" }, 404);
   if (request.method !== "POST") return json({ error: "Use POST" }, 405, { Allow: "POST" });
   try {

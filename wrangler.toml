@@ -2,5 +2,9 @@ name = "esphome-timezone"
 main = "src/index.ts"
 compatibility_date = "2026-09-01"
 
+# No logging is done
+[observability]
+enabled = false
+
 # Uncomment and set to serve from your own domain instead of *.workers.dev
 # routes = [{ pattern = "timezone.example.com", custom_domain = true }]

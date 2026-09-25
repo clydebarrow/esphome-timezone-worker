@@ -10,6 +10,8 @@ between standard and daylight time at the right moment without asking again.
 
 ## API
 
+The base URL and `/privacy` serve web pages that describe the service and its privacy. The API is at `/v1/timezone`.
+
 `POST /v1/timezone`
 
 Send the parameters in the body, either as JSON (`Content-Type: application/json`)
@@ -145,9 +147,12 @@ You can also deploy from your own machine with `npx wrangler login` and then
 
 ## Privacy
 
-Like any web service, the worker sees the public IP address of each device that
-calls it. The worker does not store or log it. Cloudflare's own request logs are
-covered by the Cloudflare account settings.
+Like any web service, the worker sees the public IP address of each device that calls it. It uses the address, and
+any location sent, only to work out the reply. It stores nothing: there is no log, database or cookie, and
+`wrangler.toml` turns off the logging that Cloudflare offers to Workers. The requests still pass through
+Cloudflare, whose privacy policy applies to that.
+
+The same statement is served by the worker at `/privacy`, and a short description of the service at the base URL.
 
 ## Licence
 
